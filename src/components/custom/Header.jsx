@@ -52,11 +52,12 @@ const Header = () => {
 
   return (
     <div className='p-3 shadow-sm flex justify-between items-center px-5'>
-      <div className='flex items-center'>
-        <BsSuitcaseFill className='w-9 h-9 ' />
-        <h2 className='font-bold text-3xl text-black'>TripBuddy AI</h2>
-      </div>
-
+      <a href="/" className="text-black">
+        <div className='flex items-center'>
+          <BsSuitcaseFill className='w-9 h-9 text-black ' />
+          <h2 className='font-bold text-3xl text-black'>TripBuddy AI</h2>
+        </div>
+      </a>
       <div>
         {user ?
           <div className='flex items-center gap-3'>
