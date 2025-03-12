@@ -39,12 +39,12 @@ const CreateTrip = () => {
   }
 
   useEffect (() => {
-    console.log(formData)
+    // console.log(formData)
   }, [formData])
 
   const login = useGoogleLogin({
     onSuccess:(codeResp)=>GetUserProfile(codeResp),
-    onError:(error) => console.log(error)
+    // onError:(error) => console.log(error)
   })
 
   const onGenerateTrip = async() => {
@@ -80,7 +80,7 @@ const CreateTrip = () => {
 
     const result = await chatSession.sendMessage(FINAL_PROMPT)
 
-    console.log(result?.response?.text());
+    // console.log(result?.response?.text());
     setLoading(false);
     SaveAiTrip(result?.response?.text())
   }
@@ -107,7 +107,7 @@ const CreateTrip = () => {
         Accept:'Application/json'
       }
     }).then((resp)=> {
-      console.log(resp);
+      // console.log(resp);
       localStorage.setItem('user', JSON.stringify(resp.data))
       setOpenDialog(false);
       onGenerateTrip();

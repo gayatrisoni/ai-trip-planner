@@ -24,7 +24,7 @@ const MyTrips = () => {
         const querySnapshot = await getDocs(q);
         setUserTrips([]);
         querySnapshot.forEach((doc) => {
-            console.log(doc.id, " => ", doc.data());
+            // console.log(doc.id, " => ", doc.data());
             setUserTrips(prevVal=> [...prevVal,doc.data()])
         });
     }

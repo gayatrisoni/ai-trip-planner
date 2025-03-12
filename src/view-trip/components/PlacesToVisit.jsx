@@ -3,7 +3,7 @@ import PlaceCardItem from './PlaceCardItem'
 
 const PlacesToVisit = ({trip}) => {
     
-  console.log(trip)
+  // console.log(trip)
 
   // Check if trip or its data is undefined before accessing properties
   if (!trip?.tripData?.itinerary) {

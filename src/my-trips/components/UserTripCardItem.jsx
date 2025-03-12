@@ -7,12 +7,12 @@ const UserTripCardItem = ({trip}) => {
     const [photo, setPhoto] = useState('');
 
     useEffect (() => {
-        console.log("trip Informartion:", trip)
+        // console.log("trip Informartion:", trip)
       trip&&GetPlacePhoto();
     },[trip])
 
     useEffect(() => {
-      console.log("Updated photoUrl:", photo);
+      // console.log("Updated photoUrl:", photo);
     }, [photo]);
 
     const GetPlacePhoto = async() => {
@@ -20,9 +20,9 @@ const UserTripCardItem = ({trip}) => {
         textQuery: trip?.userSelection?.location?.label
       }
       const result = await GetPlaceDetails(data).then(resp=>{
-        console.log(resp.data.places[0].photos[3].name)
+        // console.log(resp.data.places[0].photos[3].name)
         const PhotoUrl = PHOTO_REF_URL.replace('{NAME}', resp.data.places[0].photos[2].name );
-        console.log('image',PhotoUrl)
+        // console.log('image',PhotoUrl)
         setPhoto(PhotoUrl)
         
       })

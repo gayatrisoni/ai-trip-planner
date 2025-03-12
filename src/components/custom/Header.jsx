@@ -28,7 +28,7 @@ const Header = () => {
   const [openDialog, setOpenDialog] = useState(false);
 
   useEffect(() => {
-    console.log(user)
+    // console.log(user)
   }, [])
 
   const login = useGoogleLogin({
@@ -43,7 +43,7 @@ const Header = () => {
         Accept:'Application/json'
       }
     }).then((resp)=> {
-      console.log(resp);
+      // console.log(resp);
       localStorage.setItem('user', JSON.stringify(resp.data))
       setOpenDialog(false);
       window.location.reload;
